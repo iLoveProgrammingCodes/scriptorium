@@ -6,7 +6,7 @@ const inTitle = $('in-title'), inSynop = $('in-synop'), inFont = $('in-font'),
       colBorder = $('col-border'), colAccent = $('col-accent'), inUrl = $('in-url'),
       inStatus = $('in-status'), inFile = $('in-file'), inRating = $('in-rating'),
       inShowRating = $('in-show-rating'), inHashtags = $('in-hashtags'),
-      inResolution = $('in-resolution');
+      inResolution = $('in-resolution'), inTitleSize = $('in-title-size');
 
 const dTitle = $('display-title'), dSynop = $('display-synop'), dCard = $('main-card'),
       dAlign = $('align-target'), dContainer = $('fit-container'), dQr = $('display-qr'),
@@ -16,15 +16,14 @@ let selectedGenres = [];
 
 // Auto-fit
 const autoFit = () => {
-    let fSynop = 14, fTitle = 45;
+    let fSynop = 14;
+    const fTitle = parseInt(inTitleSize.value) || 45;
     const limit = 560;
     dSynop.style.fontSize = fSynop + "px";
     dTitle.style.fontSize = fTitle + "px";
     while (dContainer.offsetHeight > limit && fSynop > 7) {
         fSynop -= 0.5;
-        if (fSynop < 10 && fTitle > 20) fTitle -= 1;
         dSynop.style.fontSize = fSynop + "px";
-        dTitle.style.fontSize = fTitle + "px";
     }
 };
 
@@ -32,6 +31,7 @@ const autoFit = () => {
 inTitle.oninput = () => { dTitle.innerText = inTitle.value || "TÍTULO"; autoFit(); };
 inSynop.oninput = () => { dSynop.innerText = inSynop.value || "Sinopsis..."; autoFit(); };
 inFont.onchange = () => { dTitle.style.fontFamily = inFont.value; autoFit(); };
+inTitleSize.oninput = () => { dTitle.style.fontSize = inTitleSize.value + "px"; autoFit(); };
 inAlign.onchange = () => { dAlign.className = 'card-content-wrapper ' + inAlign.value; };
 
 rBorderW.oninput = () => dCard.style.borderWidth = rBorderW.value + 'px';

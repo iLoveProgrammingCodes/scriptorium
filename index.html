@@ -16,52 +16,61 @@
             <section class="panel">
                 <h3>🖋️ Texto & Tipografía</h3>
                 <input type="text" id="in-title" placeholder="Título">
-                <select id="in-font">
-                    <option value="'Bebas Neue', sans-serif">Fuente: Bebas (Impacto)</option>
-                    <option value="'Cinzel', serif">Fuente: Cinzel (Épico)</option>
-                    <option value="'Permanent Marker', cursive">Fuente: Marker (Agresivo)</option>
-                    <option value="'Space Mono', monospace">Fuente: Mono (Cyber)</option>
-                    <option value="'Outfit', sans-serif">Fuente: Outfit (Moderno)</option>
-                    <option value="'Playfair Display', serif">Fuente: Playfair (Elegante)</option>
-                    <option value="'Montserrat', sans-serif">Fuente: Montserrat (Profesional)</option>
-                    <option value="'Oswald', sans-serif">Fuente: Oswald (Prensa)</option>
-                    <option value="'Rajdhani', sans-serif">Fuente: Rajdhani (Tecnológico)</option>
-                    <option value="'Orbitron', sans-serif">Fuente: Orbitron (Futurista)</option>
-                    <option value="'Audiowide', cursive">Fuente: Audiowide (Retro)</option>
-                    <option value="'Black Ops One', cursive">Fuente: Black Ops (Militar)</option>
-                    <option value="'Bungee', cursive">Fuente: Bungee (Decorativa)</option>
-                    <option value="'Changa One', cursive">Fuente: Changa (Bold)</option>
-                    <option value="'Codystar', monospace">Fuente: Codystar (Pixel)</option>
-                    <option value="'Creepster', cursive">Fuente: Creepster (Terror)</option>
-                    <option value="'Damion', cursive">Fuente: Damion (Caligráfica)</option>
-                    <option value="'Eater', cursive">Fuente: Eater (Horror)</option>
-                    <option value="'Faster One', cursive">Fuente: Faster (Velocidad)</option>
-                    <option value="'Frijole', cursive">Fuente: Frijole (Manual)</option>
-                    <option value="'Griffy', cursive">Fuente: Griffy (Infantil)</option>
-                    <option value="'Hanalei', cursive">Fuente: Hanalei (Hawaiano)</option>
-                    <option value="'Iceberg', cursive">Fuente: Iceberg (Frío)</option>
-                    <option value="'Iceland', cursive">Fuente: Iceland (Nórdico)</option>
-                    <option value="'Jacquarda Bastarda 9', cursive">Fuente: Jacquarda (Gótico)</option>
-                    <option value="'Kalam', cursive">Fuente: Kalam (Manuscrito)</option>
-                    <option value="'Kenia', cursive">Fuente: Kenia (Tribal)</option>
-                    <option value="'Knewave', cursive">Fuente: Knewave (Ondulado)</option>
-                    <option value="'Londrina Outline', cursive">Fuente: Londrina Outline</option>
-                    <option value="'Londrina Shadow', cursive">Fuente: Londrina Shadow</option>
-                    <option value="'Luckiest Guy', cursive">Fuente: Luckiest (Cómics)</option>
-                    <option value="'Metal Mania', cursive">Fuente: Metal (Rock)</option>
-                    <option value="'Monoton', cursive">Fuente: Monoton (Retro)</option>
-                    <option value="'Nosifier', cursive">Fuente: Nosifier (Sci-Fi)</option>
-                    <option value="'Press Start 2P', cursive">Fuente: Press Start (Pixel)</option>
-                    <option value="'Russo One', sans-serif">Fuente: Russo (Block)</option>
-                    <option value="'Shojumaru', cursive">Fuente: Shojumaru (Japonés)</option>
-                    <option value="'Silkscreen', monospace">Fuente: Silkscreen (Digital)</option>
-                    <option value="'Smokum', cursive">Fuente: Smokum (Western)</option>
-                    <option value="'Sniglet', sans-serif">Fuente: Sniglet (Rounded)</option>
-                    <option value="'Spinnaker', sans-serif">Fuente: Spinnaker (Náutico)</option>
-                    <option value="'Vast Shadow', cursive">Fuente: Vast Shadow</option>
-                    <option value="'Wallpoet', cursive">Fuente: Wallpoet (Graffiti)</option>
-                    <option value="'ZCOOL KuaiLe', cursive">Fuente: ZCOOL (Chino)</option>
-                </select>
+                <div class="grid-2">
+                    <div>
+                        <label>Tamaño Título</label>
+                        <input type="range" id="in-title-size" min="20" max="80" value="45">
+                    </div>
+                    <div>
+                        <label>Fuente</label>
+                        <select id="in-font">
+                            <option value="'Bebas Neue', sans-serif">Bebas (Impacto)</option>
+                            <option value="'Cinzel', serif">Cinzel (Épico)</option>
+                            <option value="'Permanent Marker', cursive">Marker (Agresivo)</option>
+                            <option value="'Space Mono', monospace">Mono (Cyber)</option>
+                            <option value="'Outfit', sans-serif">Outfit (Moderno)</option>
+                            <option value="'Playfair Display', serif">Playfair (Elegante)</option>
+                            <option value="'Montserrat', sans-serif">Montserrat (Profesional)</option>
+                            <option value="'Oswald', sans-serif">Oswald (Prensa)</option>
+                            <option value="'Rajdhani', sans-serif">Rajdhani (Tecnológico)</option>
+                            <option value="'Orbitron', sans-serif">Orbitron (Futurista)</option>
+                            <option value="'Audiowide', cursive">Audiowide (Retro)</option>
+                            <option value="'Black Ops One', cursive">Black Ops (Militar)</option>
+                            <option value="'Bungee', cursive">Bungee (Decorativa)</option>
+                            <option value="'Changa One', cursive">Changa (Bold)</option>
+                            <option value="'Codystar', monospace">Codystar (Pixel)</option>
+                            <option value="'Creepster', cursive">Creepster (Terror)</option>
+                            <option value="'Damion', cursive">Damion (Caligráfica)</option>
+                            <option value="'Eater', cursive">Eater (Horror)</option>
+                            <option value="'Faster One', cursive">Faster (Velocidad)</option>
+                            <option value="'Frijole', cursive">Frijole (Manual)</option>
+                            <option value="'Griffy', cursive">Griffy (Infantil)</option>
+                            <option value="'Hanalei', cursive">Hanalei (Hawaiano)</option>
+                            <option value="'Iceberg', cursive">Iceberg (Frío)</option>
+                            <option value="'Iceland', cursive">Iceland (Nórdico)</option>
+                            <option value="'Jacquarda Bastarda 9', cursive">Jacquarda (Gótico)</option>
+                            <option value="'Kalam', cursive">Kalam (Manuscrito)</option>
+                            <option value="'Kenia', cursive">Kenia (Tribal)</option>
+                            <option value="'Knewave', cursive">Knewave (Ondulado)</option>
+                            <option value="'Londrina Outline', cursive">Londrina Outline</option>
+                            <option value="'Londrina Shadow', cursive">Londrina Shadow</option>
+                            <option value="'Luckiest Guy', cursive">Luckiest (Cómics)</option>
+                            <option value="'Metal Mania', cursive">Metal (Rock)</option>
+                            <option value="'Monoton', cursive">Monoton (Retro)</option>
+                            <option value="'Nosifier', cursive">Nosifier (Sci-Fi)</option>
+                            <option value="'Press Start 2P', cursive">Press Start (Pixel)</option>
+                            <option value="'Russo One', sans-serif">Russo (Block)</option>
+                            <option value="'Shojumaru', cursive">Shojumaru (Japonés)</option>
+                            <option value="'Silkscreen', monospace">Silkscreen (Digital)</option>
+                            <option value="'Smokum', cursive">Smokum (Western)</option>
+                            <option value="'Sniglet', sans-serif">Sniglet (Rounded)</option>
+                            <option value="'Spinnaker', sans-serif">Spinnaker (Náutico)</option>
+                            <option value="'Vast Shadow', cursive">Vast Shadow</option>
+                            <option value="'Wallpoet', cursive">Wallpoet (Graffiti)</option>
+                            <option value="'ZCOOL KuaiLe', cursive">ZCOOL (Chino)</option>
+                        </select>
+                    </div>
+                </div>
                 <select id="in-align">
                     <option value="align-left">Alineación: Izquierda</option>
                     <option value="align-center">Alineación: Centro</option>
