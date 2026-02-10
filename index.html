@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manhwa Studio - Scriptium</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;900&family=Bebas+Neue&family=Cinzel:wght@900&family=Permanent+Marker&family=Space+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <h2 style="font-weight: 900; letter-spacing: -1px; margin-bottom: 20px;"><span style="color:var(--accent)">SCRIPTIUM</span></h2>
+        
+        <div class="settings-scroll">
+            <section class="panel">
+                <h3>🖋️ Texto & Tipografía</h3>
+                <input type="text" id="in-title" placeholder="Título">
+                <select id="in-font">
+                    <option value="'Bebas Neue', sans-serif">Fuente: Bebas (Impacto)</option>
+                    <option value="'Cinzel', serif">Fuente: Cinzel (Épico)</option>
+                    <option value="'Permanent Marker', cursive">Fuente: Marker (Agresivo)</option>
+                    <option value="'Space Mono', monospace">Fuente: Mono (Cyber)</option>
+                    <option value="'Outfit', sans-serif">Fuente: Outfit (Moderno)</option>
+                </select>
+                <select id="in-align">
+                    <option value="align-left">Alineación: Izquierda</option>
+                    <option value="align-center">Alineación: Centro</option>
+                    <option value="align-right">Alineación: Derecha</option>
+                </select>
+                <textarea id="in-synop" placeholder="Sinopsis..." rows="5"></textarea>
+            </section>
+
+            <section class="panel">
+                <h3>⭐ Calificación</h3>
+                <div class="grid-2">
+                    <div>
+                        <label>Mostrar Rating</label>
+                        <select id="in-show-rating">
+                            <option value="no">No mostrar</option>
+                            <option value="yes">Sí mostrar</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Calificación</label>
+                        <input type="number" id="in-rating" min="0" max="10" step="0.1" value="9.5" placeholder="9.5">
+                    </div>
+                </div>
+            </section>
+
+            <section class="panel">
+                <h3>🏷️ Géneros</h3>
+                <div class="grid-3">
+                    <button class="tag-btn" data-genre="Acción">Acción</button>
+                    <button class="tag-btn" data-genre="Romance">Romance</button>
+                    <button class="tag-btn" data-genre="Fantasía">Fantasía</button>
+                    <button class="tag-btn" data-genre="Drama">Drama</button>
+                    <button class="tag-btn" data-genre="Comedia">Comedia</button>
+                    <button class="tag-btn" data-genre="Thriller">Thriller</button>
+                    <button class="tag-btn" data-genre="Sci-Fi">Sci-Fi</button>
+                    <button class="tag-btn" data-genre="Horror">Horror</button>
+                    <button class="tag-btn" data-genre="Slice of Life">Slice of Life</button>
+                    <button class="tag-btn" data-genre="Aventura">Aventura</button>
+                    <button class="tag-btn" data-genre="Misterio">Misterio</button>
+                    <button class="tag-btn" data-genre="Supernatural">Supernatural</button>
+                    <button class="tag-btn" data-genre="Psicológico">Psicológico</button>
+                    <button class="tag-btn" data-genre="Shounen">Shounen</button>
+                    <button class="tag-btn" data-genre="Shoujo">Shoujo</button>
+                    <button class="tag-btn" data-genre="Seinen">Seinen</button>
+                    <button class="tag-btn" data-genre="Josei">Josei</button>
+                    <button class="tag-btn" data-genre="Isekai">Isekai</button>
+                    <button class="tag-btn" data-genre="Harem">Harem</button>
+                    <button class="tag-btn" data-genre="Ecchi">Ecchi</button>
+                    <button class="tag-btn" data-genre="Yuri">Yuri</button>
+                    <button class="tag-btn" data-genre="Yaoi">Yaoi</button>
+                    <button class="tag-btn" data-genre="Mecha">Mecha</button>
+                    <button class="tag-btn" data-genre="Deportes">Deportes</button>
+                    <button class="tag-btn" data-genre="Musical">Musical</button>
+                    <button class="tag-btn" data-genre="Histórico">Histórico</button>
+                    <button class="tag-btn" data-genre="Militar">Militar</button>
+                    <button class="tag-btn" data-genre="Policial">Policial</button>
+                    <button class="tag-btn" data-genre="Mafia">Mafia</button>
+                    <button class="tag-btn" data-genre="Vampiros">Vampiros</button>
+                    <button class="tag-btn" data-genre="Zombies">Zombies</button>
+                    <button class="tag-btn" data-genre="Post-Apocalíptico">Post-Apocalíptico</button>
+                    <button class="tag-btn" data-genre="Cyberpunk">Cyberpunk</button>
+                    <button class="tag-btn" data-genre="Steampunk">Steampunk</button>
+                    <button class="tag-btn" data-genre="Distopía">Distopía</button>
+                    <button class="tag-btn" data-genre="Utopía">Utopía</button>
+                    <button class="tag-btn" data-genre="Artes Marciales">Artes Marciales</button>
+                    <button class="tag-btn" data-genre="Cultivation">Cultivation</button>
+                    <button class="tag-btn" data-genre="Sistema">Sistema</button>
+                    <button class="tag-btn" data-genre="Regresión">Regresión</button>
+                    <button class="tag-btn" data-genre="Reencarnación">Reencarnación</button>
+                    <button class="tag-btn" data-genre="Transmigración">Transmigración</button>
+                    <button class="tag-btn" data-genre="Dungeon">Dungeon</button>
+                    <button class="tag-btn" data-genre="Cazadores">Cazadores</button>
+                    <button class="tag-btn" data-genre="Leveling">Leveling</button>
+                    <button class="tag-btn" data-genre="OP MC">OP MC</button>
+                    <button class="tag-btn" data-genre="Venganza">Venganza</button>
+                    <button class="tag-btn" data-genre="Estrategia">Estrategia</button>
+                    <button class="tag-btn" data-genre="Supervivencia">Supervivencia</button>
+                    <button class="tag-btn" data-genre="Escolar">Escolar</button>
+                    <button class="tag-btn" data-genre="Oficina">Oficina</button>
+                    <button class="tag-btn" data-genre="Chaebol">Chaebol</button>
+                    <button class="tag-btn" data-genre="CEO">CEO</button>
+                    <button class="tag-btn" data-genre="Médico">Médico</button>
+                    <button class="tag-btn" data-genre="Cocina">Cocina</button>
+                    <button class="tag-btn" data-genre="Game">Game</button>
+                    <button class="tag-btn" data-genre="VR">VR</button>
+                    <button class="tag-btn" data-genre="Murim">Murim</button>
+                    <button class="tag-btn" data-genre="Wuxia">Wuxia</button>
+                    <button class="tag-btn" data-genre="Xianxia">Xianxia</button>
+                    <button class="tag-btn" data-genre="BL">BL</button>
+                    <button class="tag-btn" data-genre="GL">GL</button>
+                    <button class="tag-btn" data-genre="Smut">Smut</button>
+                    <button class="tag-btn" data-genre="Adulto">Adulto</button>
+                    <button class="tag-btn" data-genre="Magia">Magia</button>
+                    <button class="tag-btn" data-genre="Demonios">Demonios</button>
+                    <button class="tag-btn" data-genre="Ángeles">Ángeles</button>
+                    <button class="tag-btn" data-genre="Dragones">Dragones</button>
+                    <button class="tag-btn" data-genre="Hadas">Hadas</button>
+                    <button class="tag-btn" data-genre="Mitología">Mitología</button>
+                    <button class="tag-btn" data-genre="Folklore">Folklore</button>
+                    <button class="tag-btn" data-genre="Animales">Animales</button>
+                    <button class="tag-btn" data-genre="Monstruos">Monstruos</button>
+                    <button class="tag-btn" data-genre="Villano MC">Villano MC</button>
+                    <button class="tag-btn" data-genre="Antihéroe">Antihéroe</button>
+                    <button class="tag-btn" data-genre="Héroe">Héroe</button>
+                    <button class="tag-btn" data-genre="Nobles">Nobles</button>
+                    <button class="tag-btn" data-genre="Realeza">Realeza</button>
+                    <button class="tag-btn" data-genre="Espías">Espías</button>
+                    <button class="tag-btn" data-genre="Asesinos">Asesinos</button>
+                    <button class="tag-btn" data-genre="Ninja">Ninja</button>
+                    <button class="tag-btn" data-genre="Samurai">Samurai</button>
+                    <button class="tag-btn" data-genre="Piratas">Piratas</button>
+                    <button class="tag-btn" data-genre="Viajes en el Tiempo">Viajes en el Tiempo</button>
+                    <button class="tag-btn" data-genre="Dimensiones">Dimensiones</button>
+                    <button class="tag-btn" data-genre="Espacial">Espacial</button>
+                    <button class="tag-btn" data-genre="Aliens">Aliens</button>
+                    <button class="tag-btn" data-genre="Apocalipsis">Apocalipsis</button>
+                    <button class="tag-btn" data-genre="Survival Game">Survival Game</button>
+                    <button class="tag-btn" data-genre="Death Game">Death Game</button>
+                    <button class="tag-btn" data-genre="Tower">Tower</button>
+                    <button class="tag-btn" data-genre="Gate">Gate</button>
+                    <button class="tag-btn" data-genre="Necromancer">Necromancer</button>
+                    <button class="tag-btn" data-genre="Summoner">Summoner</button>
+                    <button class="tag-btn" data-genre="Alquimia">Alquimia</button>
+                    <button class="tag-btn" data-genre="Herrería">Herrería</button>
+                    <button class="tag-btn" data-genre="Mercenario">Mercenario</button>
+                    <button class="tag-btn" data-genre="Aventurero">Aventurero</button>
+                    <button class="tag-btn" data-genre="Gremio">Gremio</button>
+                    <button class="tag-btn" data-genre="Academia">Academia</button>
+                    <button class="tag-btn" data-genre="Universidad">Universidad</button>
+                    <button class="tag-btn" data-genre="Idol">Idol</button>
+                    <button class="tag-btn" data-genre="Showbiz">Showbiz</button>
+                    <button class="tag-btn" data-genre="Streaming">Streaming</button>
+                    <button class="tag-btn" data-genre="Actor">Actor</button>
+                    <button class="tag-btn" data-genre="Modelo">Modelo</button>
+                    <button class="tag-btn" data-genre="Fotógrafo">Fotógrafo</button>
+                    <button class="tag-btn" data-genre="Artista">Artista</button>
+                    <button class="tag-btn" data-genre="Escritor">Escritor</button>
+                    <button class="tag-btn" data-genre="Mangaka">Mangaka</button>
+                    <button class="tag-btn" data-genre="Programador">Programador</button>
+                    <button class="tag-btn" data-genre="Hacker">Hacker</button>
+                    <button class="tag-btn" data-genre="Detective">Detective</button>
+                    <button class="tag-btn" data-genre="Abogado">Abogado</button>
+                    <button class="tag-btn" data-genre="Profesor">Profesor</button>
+                    <button class="tag-btn" data-genre="Estudiante">Estudiante</button>
+                    <button class="tag-btn" data-genre="Familia">Familia</button>
+                    <button class="tag-btn" data-genre="Amistad">Amistad</button>
+                    <button class="tag-btn" data-genre="Triángulo Amoroso">Triángulo Amoroso</button>
+                    <button class="tag-btn" data-genre="Amor Prohibido">Amor Prohibido</button>
+                    <button class="tag-btn" data-genre="Segundo Amor">Segundo Amor</button>
+                    <button class="tag-btn" data-genre="Amor de Infancia">Amor de Infancia</button>
+                    <button class="tag-btn" data-genre="Enemigos a Amantes">Enemigos a Amantes</button>
+                    <button class="tag-btn" data-genre="Fake Dating">Fake Dating</button>
+                    <button class="tag-btn" data-genre="Contrato">Contrato</button>
+                    <button class="tag-btn" data-genre="Matrimonio Arreglado">Matrimonio Arreglado</button>
+                    <button class="tag-btn" data-genre="Edad Gap">Edad Gap</button>
+                    <button class="tag-btn" data-genre="Boss x Employee">Boss x Employee</button>
+                    <button class="tag-btn" data-genre="Omegaverse">Omegaverse</button>
+                    <button class="tag-btn" data-genre="Mpreg">Mpreg</button>
+                </div>
+            </section>
+
+            <section class="panel">
+                <h3>#️⃣ Hashtags</h3>
+                <input type="text" id="in-hashtags" placeholder="#manhwa #webtoon #romance (separados por espacio)">
+                <label>Los hashtags se mostrarán debajo de la sinopsis</label>
+            </section>
+
+            <section class="panel">
+                <h3>📐 Marco & Borde</h3>
+                <div class="grid-2">
+                    <div><label>Grosor Borde</label><input type="range" id="r-border-w" min="0" max="20" value="2"></div>
+                    <div><label>Redondeo</label><input type="range" id="r-radius" min="0" max="60" value="25"></div>
+                </div>
+                <div class="grid-2">
+                    <div><label>Color Borde</label><input type="color" id="col-border" value="#6366f1"></div>
+                    <div><label>Acento Tags</label><input type="color" id="col-accent" value="#6366f1"></div>
+                </div>
+            </section>
+
+            <section class="panel">
+                <h3>🖼️ Resolución de Exportación</h3>
+                <select id="in-resolution">
+                    <option value="2">2K (Óptimo)</option>
+                    <option value="4" selected>4K (Alta Calidad)</option>
+                    <option value="6">6K (Muy Alta)</option>
+                    <option value="8">8K (Máxima)</option>
+                </select>
+                <label>Mayor resolución = archivo más pesado</label>
+            </section>
+
+            <section class="panel">
+                <h3>🔗 Enlaces & Estado</h3>
+                <input type="text" id="in-url" placeholder="URL para QR (Arriba)">
+                <select id="in-status">
+                    <option value="EN EMISIÓN" data-color="#00f2ff">Emisión</option>
+                    <option value="COMPLETADO" data-color="#2ed573">Completado</option>
+                    <option value="FINALIZADO" data-color="#2ed573">Finalizado</option>
+                    <option value="HIATUS" data-color="#ff4757">Hiatus</option>
+                </select>
+                <input type="file" id="in-file" accept="image/*">
+            </section>
+        </div>
+
+        <button id="download-btn" class="main-btn">EXPORTAR IMAGEN</button>
+    </aside>
+
+    <main class="preview-zone">
+        <div id="capture-area">
+            <div class="manhwa-card" id="main-card">
+                <div id="card-bg" class="card-bg"></div>
+                <div class="card-overlay"></div>
+                
+                <img id="display-qr" class="qr-header" src="">
+                <div id="display-status" class="status-badge">EN EMISIÓN</div>
+                <div id="display-rating" class="rating-badge">
+                    <span class="star">★</span>
+                    <span class="score">9.5</span>
+                </div>
+
+                <div class="coord" style="top:10px; left:10px;">AX-440</div>
+                <div class="coord" style="bottom:10px; right:10px;">REF: STUDIO</div>
+
+                <div class="card-content-wrapper" id="align-target">
+                    <div id="fit-container">
+                        <div id="genres-row" class="genres-row"></div>
+                        <h2 id="display-title">SCRIPTIUM</h2>
+                        <div id="display-synop">Personaliza bordes, fuentes, calificación, géneros y hashtags. El texto siempre se ajustará automáticamente.</div>
+                        <div id="hashtags-row" class="hashtags-row"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
