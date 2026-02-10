@@ -33,59 +33,126 @@ body {
     z-index: 100;
 }
 
+.settings-scroll {
+    flex: 1;
+    overflow-y: auto;
+}
+
+/* RESPONSIVE BREAKPOINTS */
 @media (max-width: 900px) { 
     .sidebar { 
-        width: 300px; 
+        width: 350px; 
     } 
 }
 
 @media (max-width: 768px) {
     body {
         flex-direction: column;
-        height: auto;
-        min-height: 100vh;
+        overflow-y: auto;
+        overflow-x: hidden;
     }
 
     .sidebar {
         width: 100%;
+        height: auto;
+        max-height: none;
         border-right: none;
         border-bottom: 1px solid #1f1f27;
-        max-height: 50vh;
+        padding: 15px;
+    }
+
+    .settings-scroll {
+        max-height: 60vh;
+        overflow-y: auto;
     }
 
     .preview-zone {
-        padding: 20px;
-        min-height: 50vh;
+        padding: 20px 10px;
+        height: auto;
+        min-height: 40vh;
     }
 
     .manhwa-card {
-        transform: scale(0.85);
+        width: min(400px, 90vw);
+        height: min(600px, calc(90vw * 1.5));
     }
 
-    .grid-3 {
-        grid-template-columns: 1fr 1fr;
+    :root {
+        --card-w: min(400px, 90vw);
+        --card-h: min(600px, calc(90vw * 1.5));
     }
 }
 
 @media (max-width: 480px) {
-    .manhwa-card {
-        transform: scale(0.65);
-    }
-
     .sidebar {
-        padding: 15px;
+        padding: 12px;
     }
 
     .panel {
-        padding: 12px;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .panel h3 {
+        font-size: 9px;
+        margin-bottom: 8px;
+    }
+
+    input, textarea, select {
+        padding: 8px;
+        font-size: 11px;
     }
 
     .grid-2 {
         grid-template-columns: 1fr;
+        gap: 8px;
     }
 
     .grid-3 {
+        grid-template-columns: 1fr 1fr;
+        gap: 6px;
+    }
+
+    .tag-btn {
+        padding: 6px 10px;
+        font-size: 10px;
+    }
+
+    .manhwa-card {
+        width: min(340px, 95vw);
+        height: min(510px, calc(95vw * 1.5));
+    }
+
+    :root {
+        --card-w: min(340px, 95vw);
+        --card-h: min(510px, calc(95vw * 1.5));
+    }
+
+    .preview-zone {
+        padding: 15px 5px;
+    }
+}
+
+@media (max-width: 380px) {
+    .grid-3 {
         grid-template-columns: 1fr;
+    }
+
+    .manhwa-card {
+        width: min(300px, 98vw);
+        height: min(450px, calc(98vw * 1.5));
+    }
+
+    .card-content-wrapper {
+        padding: 25px;
+    }
+
+    #display-title {
+        font-size: 35px;
+    }
+
+    #display-synop {
+        font-size: 12px;
     }
 }
 
