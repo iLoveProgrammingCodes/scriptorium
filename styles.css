@@ -2,8 +2,6 @@
     --accent: #6366f1;
     --sidebar-bg: #0a0a0c;
     --panel-bg: #121218;
-    --card-w: 440px;
-    --card-h: 660px;
 }
 
 * { 
@@ -12,16 +10,20 @@
     padding: 0; 
 }
 
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
 body { 
     background: #000; 
     color: white; 
     font-family: 'Outfit', sans-serif; 
     display: flex; 
-    height: 100vh; 
-    overflow: hidden; 
 }
 
-/* SIDEBAR RESPONSIVO */
+/* SIDEBAR */
 .sidebar {
     width: 420px; 
     background: var(--sidebar-bg); 
@@ -30,130 +32,15 @@ body {
     flex-direction: column; 
     border-right: 1px solid #1f1f27;
     overflow-y: auto; 
+    overflow-x: hidden;
     z-index: 100;
+    flex-shrink: 0;
 }
 
 .settings-scroll {
     flex: 1;
     overflow-y: auto;
-}
-
-/* RESPONSIVE BREAKPOINTS */
-@media (max-width: 900px) { 
-    .sidebar { 
-        width: 350px; 
-    } 
-}
-
-@media (max-width: 768px) {
-    body {
-        flex-direction: column;
-        overflow-y: auto;
-        overflow-x: hidden;
-    }
-
-    .sidebar {
-        width: 100%;
-        height: auto;
-        max-height: none;
-        border-right: none;
-        border-bottom: 1px solid #1f1f27;
-        padding: 15px;
-    }
-
-    .settings-scroll {
-        max-height: 60vh;
-        overflow-y: auto;
-    }
-
-    .preview-zone {
-        padding: 20px 10px;
-        height: auto;
-        min-height: 40vh;
-    }
-
-    .manhwa-card {
-        width: min(400px, 90vw);
-        height: min(600px, calc(90vw * 1.5));
-    }
-
-    :root {
-        --card-w: min(400px, 90vw);
-        --card-h: min(600px, calc(90vw * 1.5));
-    }
-}
-
-@media (max-width: 480px) {
-    .sidebar {
-        padding: 12px;
-    }
-
-    .panel {
-        padding: 10px;
-        margin-bottom: 10px;
-    }
-
-    .panel h3 {
-        font-size: 9px;
-        margin-bottom: 8px;
-    }
-
-    input, textarea, select {
-        padding: 8px;
-        font-size: 11px;
-    }
-
-    .grid-2 {
-        grid-template-columns: 1fr;
-        gap: 8px;
-    }
-
-    .grid-3 {
-        grid-template-columns: 1fr 1fr;
-        gap: 6px;
-    }
-
-    .tag-btn {
-        padding: 6px 10px;
-        font-size: 10px;
-    }
-
-    .manhwa-card {
-        width: min(340px, 95vw);
-        height: min(510px, calc(95vw * 1.5));
-    }
-
-    :root {
-        --card-w: min(340px, 95vw);
-        --card-h: min(510px, calc(95vw * 1.5));
-    }
-
-    .preview-zone {
-        padding: 15px 5px;
-    }
-}
-
-@media (max-width: 380px) {
-    .grid-3 {
-        grid-template-columns: 1fr;
-    }
-
-    .manhwa-card {
-        width: min(300px, 98vw);
-        height: min(450px, calc(98vw * 1.5));
-    }
-
-    .card-content-wrapper {
-        padding: 25px;
-    }
-
-    #display-title {
-        font-size: 35px;
-    }
-
-    #display-synop {
-        font-size: 12px;
-    }
+    overflow-x: hidden;
 }
 
 .panel { 
@@ -213,6 +100,8 @@ label {
     border-radius: 10px; 
     font-weight: 900; 
     cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
 }
 
 /* TAG BUTTONS */
@@ -226,6 +115,7 @@ label {
     cursor: pointer;
     transition: all 0.2s; 
     font-weight: 600;
+    white-space: nowrap;
 }
 
 .tag-btn.active {
@@ -246,13 +136,19 @@ label {
     padding: 40px;
 }
 
-/* CARD ARCHITECT */
+#capture-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* CARD */
 .manhwa-card {
-    width: var(--card-w); 
-    height: var(--card-h);
+    width: 440px;
+    height: 660px;
     position: relative; 
     overflow: hidden;
-    background: #000; 
+    background: transparent; 
     box-shadow: 0 40px 100px rgba(0,0,0,0.8);
     border: 2px solid var(--accent);
     border-radius: 20px;
@@ -274,7 +170,6 @@ label {
     z-index: 2; 
 }
 
-/* QR PEQUEÑO */
 .qr-header {
     position: absolute; 
     top: 25px; 
@@ -301,7 +196,6 @@ label {
     border: 1px solid rgba(255,255,255,0.2);
 }
 
-/* RATING BADGE */
 .rating-badge {
     position: absolute; 
     top: 85px; 
@@ -328,7 +222,6 @@ label {
     font-size: 13px; 
 }
 
-/* CONTENIDO FLEXIBLE */
 .card-content-wrapper {
     position: absolute; 
     inset: 0; 
@@ -347,7 +240,6 @@ label {
     flex-direction: column;
 }
 
-/* ALINEACIONES */
 .align-left { 
     text-align: left; 
     align-items: flex-start; 
@@ -412,11 +304,61 @@ label {
     color: var(--accent); 
 }
 
-/* DECORATIVO */
 .coord { 
     position: absolute; 
     font-size: 8px; 
     color: rgba(255,255,255,0.2); 
-    font-family: monospace; 
-    z-index: 6; 
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+    .sidebar { width: 350px; }
+    .preview-zone { padding: 30px; }
+    .manhwa-card { width: 400px; height: 600px; }
+}
+
+@media (max-width: 900px) {
+    .sidebar { width: 320px; }
+    .grid-3 { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 768px) {
+    body { flex-direction: column; height: auto; min-height: 100vh; overflow-y: auto; }
+    html, body { overflow: auto; }
+    .sidebar { width: 100%; border-right: none; border-bottom: 1px solid #1f1f27; max-height: none; overflow-y: visible; }
+    .settings-scroll { max-height: none; overflow-y: visible; }
+    .preview-zone { padding: 30px 20px; min-height: 50vh; overflow: visible; }
+    .manhwa-card { width: 380px; height: 570px; }
+}
+
+@media (max-width: 600px) {
+    .sidebar { padding: 15px; }
+    .panel { padding: 12px; margin-bottom: 10px; }
+    .preview-zone { padding: 20px 10px; }
+    .manhwa-card { width: 340px; height: 510px; }
+    .grid-2 { grid-template-columns: 1fr; }
+    .grid-3 { grid-template-columns: 1fr 1fr; }
+    .tag-btn { font-size: 10px; padding: 7px 10px; }
+}
+
+@media (max-width: 400px) {
+    .sidebar { padding: 12px; }
+    .panel { padding: 10px; }
+    .panel h3 { font-size: 9px; }
+    input, textarea, select { padding: 8px; font-size: 11px; }
+    .preview-zone { padding: 15px 5px; }
+    .manhwa-card { width: 300px; height: 450px; }
+    .card-content-wrapper { padding: 25px; }
+    #display-title { font-size: 38px; }
+    #display-synop { font-size: 12px; }
+    .grid-3 { grid-template-columns: 1fr; }
+    .main-btn { padding: 14px; font-size: 14px; }
+}
+
+@media (max-width: 350px) {
+    .manhwa-card { width: 280px; height: 420px; }
+    .card-content-wrapper { padding: 20px; }
+    #display-title { font-size: 32px; }
+    #display-synop { font-size: 11px; }
+    .status-badge, .rating-badge { font-size: 8px; padding: 5px 8px; }
 }

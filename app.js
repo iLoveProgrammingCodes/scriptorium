@@ -1,45 +1,25 @@
 const $ = (id) => document.getElementById(id);
 
-// Referencias de Input
-const inTitle = $('in-title'), 
-      inSynop = $('in-synop'), 
-      inFont = $('in-font'),
-      inAlign = $('in-align'), 
-      rBorderW = $('r-border-w'), 
-      rRadius = $('r-radius'),
-      colBorder = $('col-border'), 
-      colAccent = $('col-accent'), 
-      inUrl = $('in-url'),
-      inStatus = $('in-status'), 
-      inFile = $('in-file'), 
-      inRating = $('in-rating'),
-      inShowRating = $('in-show-rating'), 
-      inHashtags = $('in-hashtags'),
+// Referencias
+const inTitle = $('in-title'), inSynop = $('in-synop'), inFont = $('in-font'),
+      inAlign = $('in-align'), rBorderW = $('r-border-w'), rRadius = $('r-radius'),
+      colBorder = $('col-border'), colAccent = $('col-accent'), inUrl = $('in-url'),
+      inStatus = $('in-status'), inFile = $('in-file'), inRating = $('in-rating'),
+      inShowRating = $('in-show-rating'), inHashtags = $('in-hashtags'),
       inResolution = $('in-resolution');
 
-// Referencias de Display
-const dTitle = $('display-title'), 
-      dSynop = $('display-synop'), 
-      dCard = $('main-card'),
-      dAlign = $('align-target'), 
-      dContainer = $('fit-container'), 
-      dQr = $('display-qr'),
-      dRating = $('display-rating'), 
-      dGenresRow = $('genres-row'), 
-      dHashtagsRow = $('hashtags-row');
+const dTitle = $('display-title'), dSynop = $('display-synop'), dCard = $('main-card'),
+      dAlign = $('align-target'), dContainer = $('fit-container'), dQr = $('display-qr'),
+      dRating = $('display-rating'), dGenresRow = $('genres-row'), dHashtagsRow = $('hashtags-row');
 
-// Array de géneros seleccionados
 let selectedGenres = [];
 
-// Función de Ajuste Automático (Fit)
+// Auto-fit
 const autoFit = () => {
-    let fSynop = 14; 
-    let fTitle = 45; 
+    let fSynop = 14, fTitle = 45;
     const limit = 560;
-    
     dSynop.style.fontSize = fSynop + "px";
     dTitle.style.fontSize = fTitle + "px";
-
     while (dContainer.offsetHeight > limit && fSynop > 7) {
         fSynop -= 0.5;
         if (fSynop < 10 && fTitle > 20) fTitle -= 1;
@@ -48,37 +28,21 @@ const autoFit = () => {
     }
 };
 
-// Eventos de Personalización
-inTitle.oninput = () => { 
-    dTitle.innerText = inTitle.value || "TÍTULO"; 
-    autoFit(); 
-};
-
-inSynop.oninput = () => { 
-    dSynop.innerText = inSynop.value || "Sinopsis..."; 
-    autoFit(); 
-};
-
-inFont.onchange = () => { 
-    dTitle.style.fontFamily = inFont.value; 
-    autoFit(); 
-};
-
-inAlign.onchange = () => { 
-    dAlign.className = 'card-content-wrapper ' + inAlign.value; 
-};
+// Eventos
+inTitle.oninput = () => { dTitle.innerText = inTitle.value || "TÍTULO"; autoFit(); };
+inSynop.oninput = () => { dSynop.innerText = inSynop.value || "Sinopsis..."; autoFit(); };
+inFont.onchange = () => { dTitle.style.fontFamily = inFont.value; autoFit(); };
+inAlign.onchange = () => { dAlign.className = 'card-content-wrapper ' + inAlign.value; };
 
 rBorderW.oninput = () => dCard.style.borderWidth = rBorderW.value + 'px';
 rRadius.oninput = () => dCard.style.borderRadius = rRadius.value + 'px';
 colBorder.oninput = () => dCard.style.borderColor = colBorder.value;
-
 colAccent.oninput = () => {
     document.querySelectorAll('.genre-item').forEach(e => e.style.background = colAccent.value);
     document.querySelectorAll('.hashtag-item').forEach(e => e.style.color = colAccent.value);
     document.documentElement.style.setProperty('--accent', colAccent.value);
 };
 
-// Rating
 inShowRating.onchange = () => {
     dRating.style.display = inShowRating.value === 'yes' ? 'flex' : 'none';
 };
@@ -88,18 +52,15 @@ inRating.oninput = () => {
     dRating.querySelector('.score').innerText = score.toFixed(1);
 };
 
-// Géneros
 document.querySelectorAll('.tag-btn').forEach(btn => {
     btn.onclick = () => {
         const genre = btn.dataset.genre;
         btn.classList.toggle('active');
-        
         if (selectedGenres.includes(genre)) {
             selectedGenres = selectedGenres.filter(g => g !== genre);
         } else {
             selectedGenres.push(genre);
         }
-        
         updateGenres();
     };
 });
@@ -116,11 +77,9 @@ const updateGenres = () => {
     autoFit();
 };
 
-// Hashtags
 inHashtags.oninput = () => {
     const tags = inHashtags.value.trim().split(/\s+/).filter(t => t);
     dHashtagsRow.innerHTML = '';
-    
     tags.forEach(tag => {
         const span = document.createElement('span');
         span.className = 'hashtag-item';
@@ -131,7 +90,6 @@ inHashtags.oninput = () => {
     autoFit();
 };
 
-// URL para QR
 inUrl.oninput = () => {
     if (inUrl.value) {
         dQr.src = `https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=${encodeURIComponent(inUrl.value)}`;
@@ -141,14 +99,12 @@ inUrl.oninput = () => {
     }
 };
 
-// Subir imagen de fondo
 inFile.onchange = (e) => {
     const reader = new FileReader();
     reader.onload = (ev) => $('card-bg').style.backgroundImage = `url(${ev.target.result})`;
     reader.readAsDataURL(e.target.files[0]);
 };
 
-// Cambiar estado
 inStatus.onchange = () => {
     const opt = inStatus.options[inStatus.selectedIndex];
     const badge = $('display-status');
@@ -157,14 +113,9 @@ inStatus.onchange = () => {
     badge.style.borderColor = opt.dataset.color;
 };
 
-// Exportar imagen
 $('download-btn').onclick = function() {
     const scale = parseInt(inResolution.value);
-    html2canvas($('capture-area'), { 
-        scale: scale, 
-        useCORS: true, 
-        backgroundColor: null 
-    }).then(canvas => {
+    html2canvas($('capture-area'), { scale: scale, useCORS: true, backgroundColor: null }).then(canvas => {
         const link = document.createElement('a');
         link.download = `Scriptium_${inTitle.value || 'Card'}.png`;
         link.href = canvas.toDataURL('image/png', 1.0);

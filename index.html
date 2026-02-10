@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manhwa Studio - Scriptium</title>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;900&family=Bebas+Neue&family=Cinzel:wght@900&family=Permanent+Marker&family=Space+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;900&family=Bebas+Neue&family=Cinzel:wght@900&family=Permanent+Marker&family=Space+Mono&family=Playfair+Display:wght@700;900&family=Montserrat:wght@800;900&family=Oswald:wght@700&family=Rajdhani:wght@700&family=Orbitron:wght@900&family=Audiowide&family=Black+Ops+One&family=Bungee&family=Changa+One&family=Codystar&family=Creepster&family=Damion&family=Eater&family=Faster+One&family=Frijole&family=Griffy&family=Hanalei&family=Iceberg&family=Iceland&family=Jacquarda+Bastarda+9&family=Kalam:wght@700&family=Kenia&family=Knewave&family=Londrina+Outline&family=Londrina+Shadow&family=Luckiest+Guy&family=Metal+Mania&family=Metal+Mania&family=Monoton&family=Nosifier&family=Press+Start+2P&family=Russo+One&family=Shojumaru&family=Silkscreen&family=Smokum&family=Sniglet:wght@800&family=Spinnaker&family=Vast+Shadow&family=Wallpoet&family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -22,6 +22,45 @@
                     <option value="'Permanent Marker', cursive">Fuente: Marker (Agresivo)</option>
                     <option value="'Space Mono', monospace">Fuente: Mono (Cyber)</option>
                     <option value="'Outfit', sans-serif">Fuente: Outfit (Moderno)</option>
+                    <option value="'Playfair Display', serif">Fuente: Playfair (Elegante)</option>
+                    <option value="'Montserrat', sans-serif">Fuente: Montserrat (Profesional)</option>
+                    <option value="'Oswald', sans-serif">Fuente: Oswald (Prensa)</option>
+                    <option value="'Rajdhani', sans-serif">Fuente: Rajdhani (Tecnológico)</option>
+                    <option value="'Orbitron', sans-serif">Fuente: Orbitron (Futurista)</option>
+                    <option value="'Audiowide', cursive">Fuente: Audiowide (Retro)</option>
+                    <option value="'Black Ops One', cursive">Fuente: Black Ops (Militar)</option>
+                    <option value="'Bungee', cursive">Fuente: Bungee (Decorativa)</option>
+                    <option value="'Changa One', cursive">Fuente: Changa (Bold)</option>
+                    <option value="'Codystar', monospace">Fuente: Codystar (Pixel)</option>
+                    <option value="'Creepster', cursive">Fuente: Creepster (Terror)</option>
+                    <option value="'Damion', cursive">Fuente: Damion (Caligráfica)</option>
+                    <option value="'Eater', cursive">Fuente: Eater (Horror)</option>
+                    <option value="'Faster One', cursive">Fuente: Faster (Velocidad)</option>
+                    <option value="'Frijole', cursive">Fuente: Frijole (Manual)</option>
+                    <option value="'Griffy', cursive">Fuente: Griffy (Infantil)</option>
+                    <option value="'Hanalei', cursive">Fuente: Hanalei (Hawaiano)</option>
+                    <option value="'Iceberg', cursive">Fuente: Iceberg (Frío)</option>
+                    <option value="'Iceland', cursive">Fuente: Iceland (Nórdico)</option>
+                    <option value="'Jacquarda Bastarda 9', cursive">Fuente: Jacquarda (Gótico)</option>
+                    <option value="'Kalam', cursive">Fuente: Kalam (Manuscrito)</option>
+                    <option value="'Kenia', cursive">Fuente: Kenia (Tribal)</option>
+                    <option value="'Knewave', cursive">Fuente: Knewave (Ondulado)</option>
+                    <option value="'Londrina Outline', cursive">Fuente: Londrina Outline</option>
+                    <option value="'Londrina Shadow', cursive">Fuente: Londrina Shadow</option>
+                    <option value="'Luckiest Guy', cursive">Fuente: Luckiest (Cómics)</option>
+                    <option value="'Metal Mania', cursive">Fuente: Metal (Rock)</option>
+                    <option value="'Monoton', cursive">Fuente: Monoton (Retro)</option>
+                    <option value="'Nosifier', cursive">Fuente: Nosifier (Sci-Fi)</option>
+                    <option value="'Press Start 2P', cursive">Fuente: Press Start (Pixel)</option>
+                    <option value="'Russo One', sans-serif">Fuente: Russo (Block)</option>
+                    <option value="'Shojumaru', cursive">Fuente: Shojumaru (Japonés)</option>
+                    <option value="'Silkscreen', monospace">Fuente: Silkscreen (Digital)</option>
+                    <option value="'Smokum', cursive">Fuente: Smokum (Western)</option>
+                    <option value="'Sniglet', sans-serif">Fuente: Sniglet (Rounded)</option>
+                    <option value="'Spinnaker', sans-serif">Fuente: Spinnaker (Náutico)</option>
+                    <option value="'Vast Shadow', cursive">Fuente: Vast Shadow</option>
+                    <option value="'Wallpoet', cursive">Fuente: Wallpoet (Graffiti)</option>
+                    <option value="'ZCOOL KuaiLe', cursive">Fuente: ZCOOL (Chino)</option>
                 </select>
                 <select id="in-align">
                     <option value="align-left">Alineación: Izquierda</option>
@@ -57,137 +96,126 @@
                     <button class="tag-btn" data-genre="Drama">Drama</button>
                     <button class="tag-btn" data-genre="Comedia">Comedia</button>
                     <button class="tag-btn" data-genre="Thriller">Thriller</button>
-                    <button class="tag-btn" data-genre="Sci-Fi">Sci-Fi</button>
-                    <button class="tag-btn" data-genre="Horror">Horror</button>
-                    <button class="tag-btn" data-genre="Slice of Life">Slice of Life</button>
-                    <button class="tag-btn" data-genre="Aventura">Aventura</button>
+                    <button class="tag-btn" data-genre="Terror">Terror</button>
+                    <button class="tag-btn" data-genre="Ciencia Ficción">Ciencia Ficción</button>
                     <button class="tag-btn" data-genre="Misterio">Misterio</button>
-                    <button class="tag-btn" data-genre="Supernatural">Supernatural</button>
-                    <button class="tag-btn" data-genre="Psicológico">Psicológico</button>
-                    <button class="tag-btn" data-genre="Shounen">Shounen</button>
-                    <button class="tag-btn" data-genre="Shoujo">Shoujo</button>
-                    <button class="tag-btn" data-genre="Seinen">Seinen</button>
-                    <button class="tag-btn" data-genre="Josei">Josei</button>
-                    <button class="tag-btn" data-genre="Isekai">Isekai</button>
-                    <button class="tag-btn" data-genre="Harem">Harem</button>
-                    <button class="tag-btn" data-genre="Ecchi">Ecchi</button>
-                    <button class="tag-btn" data-genre="Yuri">Yuri</button>
-                    <button class="tag-btn" data-genre="Yaoi">Yaoi</button>
-                    <button class="tag-btn" data-genre="Mecha">Mecha</button>
-                    <button class="tag-btn" data-genre="Deportes">Deportes</button>
-                    <button class="tag-btn" data-genre="Musical">Musical</button>
+                    <button class="tag-btn" data-genre="Aventura">Aventura</button>
                     <button class="tag-btn" data-genre="Histórico">Histórico</button>
-                    <button class="tag-btn" data-genre="Militar">Militar</button>
-                    <button class="tag-btn" data-genre="Policial">Policial</button>
-                    <button class="tag-btn" data-genre="Mafia">Mafia</button>
+                    <button class="tag-btn" data-genre="Mecha">Mecha</button>
+                    <button class="tag-btn" data-genre="Escolar">Escolar</button>
+                    <button class="tag-btn" data-genre="Psicológico">Psicológico</button>
+                    <button class="tag-btn" data-genre="Sobrenatural">Sobrenatural</button>
+                    <button class="tag-btn" data-genre="Artes Marciales">Artes Marciales</button>
+                    <button class="tag-btn" data-genre="Deportes">Deportes</button>
+                    <button class="tag-btn" data-genre="Música">Música</button>
+                    <button class="tag-btn" data-genre="Vida Diaria">Vida Diaria</button>
+                    <button class="tag-btn" data-genre="Ecchi">Ecchi</button>
+                    <button class="tag-btn" data-genre="Harem">Harem</button>
+                    <button class="tag-btn" data-genre="Isekai">Isekai</button>
+                    <button class="tag-btn" data-genre="Apocalíptico">Apocalíptico</button>
+                    <button class="tag-btn" data-genre="Zombis">Zombis</button>
                     <button class="tag-btn" data-genre="Vampiros">Vampiros</button>
-                    <button class="tag-btn" data-genre="Zombies">Zombies</button>
-                    <button class="tag-btn" data-genre="Post-Apocalíptico">Post-Apocalíptico</button>
-                    <button class="tag-btn" data-genre="Cyberpunk">Cyberpunk</button>
+                    <button class="tag-btn" data-genre="Fantasmas">Fantasmas</button>
+                    <button class="tag-btn" data-genre="Demonios">Demonios</button>
+                    <button class="tag-btn" data-genre="Ángeles">Ángeles</button>
+                    <button class="tag-btn" data-genre="Magia">Magia</button>
+                    <button class="tag-btn" data-genre="Hechicería">Hechicería</button>
+                    <button class="tag-btn" data-genre="Reencarnación">Reencarnación</button>
+                    <button class="tag-btn" data-genre="Viaje en el Tiempo">Viaje en el Tiempo</button>
+                    <button class="tag-btn" data-genre="Ciberpunk">Ciberpunk</button>
                     <button class="tag-btn" data-genre="Steampunk">Steampunk</button>
                     <button class="tag-btn" data-genre="Distopía">Distopía</button>
                     <button class="tag-btn" data-genre="Utopía">Utopía</button>
-                    <button class="tag-btn" data-genre="Artes Marciales">Artes Marciales</button>
-                    <button class="tag-btn" data-genre="Cultivation">Cultivation</button>
-                    <button class="tag-btn" data-genre="Sistema">Sistema</button>
-                    <button class="tag-btn" data-genre="Regresión">Regresión</button>
-                    <button class="tag-btn" data-genre="Reencarnación">Reencarnación</button>
-                    <button class="tag-btn" data-genre="Transmigración">Transmigración</button>
-                    <button class="tag-btn" data-genre="Dungeon">Dungeon</button>
-                    <button class="tag-btn" data-genre="Cazadores">Cazadores</button>
-                    <button class="tag-btn" data-genre="Leveling">Leveling</button>
-                    <button class="tag-btn" data-genre="OP MC">OP MC</button>
-                    <button class="tag-btn" data-genre="Venganza">Venganza</button>
-                    <button class="tag-btn" data-genre="Estrategia">Estrategia</button>
-                    <button class="tag-btn" data-genre="Supervivencia">Supervivencia</button>
-                    <button class="tag-btn" data-genre="Escolar">Escolar</button>
-                    <button class="tag-btn" data-genre="Oficina">Oficina</button>
-                    <button class="tag-btn" data-genre="Chaebol">Chaebol</button>
-                    <button class="tag-btn" data-genre="CEO">CEO</button>
+                    <button class="tag-btn" data-genre="Post-apocalíptico">Post-apocalíptico</button>
+                    <button class="tag-btn" data-genre="Guerra">Guerra</button>
+                    <button class="tag-btn" data-genre="Político">Político</button>
+                    <button class="tag-btn" data-genre="Espionaje">Espionaje</button>
                     <button class="tag-btn" data-genre="Médico">Médico</button>
-                    <button class="tag-btn" data-genre="Cocina">Cocina</button>
-                    <button class="tag-btn" data-genre="Game">Game</button>
-                    <button class="tag-btn" data-genre="VR">VR</button>
-                    <button class="tag-btn" data-genre="Murim">Murim</button>
-                    <button class="tag-btn" data-genre="Wuxia">Wuxia</button>
-                    <button class="tag-btn" data-genre="Xianxia">Xianxia</button>
-                    <button class="tag-btn" data-genre="BL">BL</button>
-                    <button class="tag-btn" data-genre="GL">GL</button>
-                    <button class="tag-btn" data-genre="Smut">Smut</button>
-                    <button class="tag-btn" data-genre="Adulto">Adulto</button>
-                    <button class="tag-btn" data-genre="Magia">Magia</button>
-                    <button class="tag-btn" data-genre="Demonios">Demonios</button>
-                    <button class="tag-btn" data-genre="Ángeles">Ángeles</button>
-                    <button class="tag-btn" data-genre="Dragones">Dragones</button>
-                    <button class="tag-btn" data-genre="Hadas">Hadas</button>
-                    <button class="tag-btn" data-genre="Mitología">Mitología</button>
-                    <button class="tag-btn" data-genre="Folklore">Folklore</button>
-                    <button class="tag-btn" data-genre="Animales">Animales</button>
-                    <button class="tag-btn" data-genre="Monstruos">Monstruos</button>
-                    <button class="tag-btn" data-genre="Villano MC">Villano MC</button>
-                    <button class="tag-btn" data-genre="Antihéroe">Antihéroe</button>
-                    <button class="tag-btn" data-genre="Héroe">Héroe</button>
-                    <button class="tag-btn" data-genre="Nobles">Nobles</button>
-                    <button class="tag-btn" data-genre="Realeza">Realeza</button>
-                    <button class="tag-btn" data-genre="Espías">Espías</button>
-                    <button class="tag-btn" data-genre="Asesinos">Asesinos</button>
+                    <button class="tag-btn" data-genre="Legal">Legal</button>
+                    <button class="tag-btn" data-genre="Negocios">Negocios</button>
+                    <button class="tag-btn" data-genre="Culinario">Culinario</button>
+                    <button class="tag-btn" data-genre="Gaming">Gaming</button>
+                    <button class="tag-btn" data-genre="Virtual">Virtual</button>
+                    <button class="tag-btn" data-genre="Realidad Virtual">Realidad Virtual</button>
+                    <button class="tag-btn" data-genre="Robots">Robots</button>
+                    <button class="tag-btn" data-genre="IA">IA</button>
+                    <button class="tag-btn" data-genre="Espacio">Espacio</button>
+                    <button class="tag-btn" data-genre="Alienígenas">Alienígenas</button>
+                    <button class="tag-btn" data-genre="Mutantes">Mutantes</button>
+                    <button class="tag-btn" data-genre="Superpoderes">Superpoderes</button>
+                    <button class="tag-btn" data-genre="Héroes">Héroes</button>
+                    <button class="tag-btn" data-genre="Villanos">Villanos</button>
+                    <button class="tag-btn" data-genre="Anti-héroes">Anti-héroes</button>
+                    <button class="tag-btn" data-genre="Vigilantes">Vigilantes</button>
+                    <button class="tag-btn" data-genre="Detectives">Detectives</button>
+                    <button class="tag-btn" data-genre="Policíaco">Policíaco</button>
+                    <button class="tag-btn" data-genre="Crimen">Crimen</button>
+                    <button class="tag-btn" data-genre="Mafia">Mafia</button>
+                    <button class="tag-btn" data-genre="Gángster">Gángster</button>
+                    <button class="tag-btn" data-genre="Western">Western</button>
+                    <button class="tag-btn" data-genre="Samurái">Samurái</button>
                     <button class="tag-btn" data-genre="Ninja">Ninja</button>
-                    <button class="tag-btn" data-genre="Samurai">Samurai</button>
                     <button class="tag-btn" data-genre="Piratas">Piratas</button>
-                    <button class="tag-btn" data-genre="Viajes en el Tiempo">Viajes en el Tiempo</button>
-                    <button class="tag-btn" data-genre="Dimensiones">Dimensiones</button>
-                    <button class="tag-btn" data-genre="Espacial">Espacial</button>
-                    <button class="tag-btn" data-genre="Aliens">Aliens</button>
-                    <button class="tag-btn" data-genre="Apocalipsis">Apocalipsis</button>
-                    <button class="tag-btn" data-genre="Survival Game">Survival Game</button>
-                    <button class="tag-btn" data-genre="Death Game">Death Game</button>
-                    <button class="tag-btn" data-genre="Tower">Tower</button>
-                    <button class="tag-btn" data-genre="Gate">Gate</button>
-                    <button class="tag-btn" data-genre="Necromancer">Necromancer</button>
-                    <button class="tag-btn" data-genre="Summoner">Summoner</button>
-                    <button class="tag-btn" data-genre="Alquimia">Alquimia</button>
-                    <button class="tag-btn" data-genre="Herrería">Herrería</button>
-                    <button class="tag-btn" data-genre="Mercenario">Mercenario</button>
-                    <button class="tag-btn" data-genre="Aventurero">Aventurero</button>
-                    <button class="tag-btn" data-genre="Gremio">Gremio</button>
-                    <button class="tag-btn" data-genre="Academia">Academia</button>
-                    <button class="tag-btn" data-genre="Universidad">Universidad</button>
-                    <button class="tag-btn" data-genre="Idol">Idol</button>
-                    <button class="tag-btn" data-genre="Showbiz">Showbiz</button>
-                    <button class="tag-btn" data-genre="Streaming">Streaming</button>
-                    <button class="tag-btn" data-genre="Actor">Actor</button>
-                    <button class="tag-btn" data-genre="Modelo">Modelo</button>
-                    <button class="tag-btn" data-genre="Fotógrafo">Fotógrafo</button>
-                    <button class="tag-btn" data-genre="Artista">Artista</button>
-                    <button class="tag-btn" data-genre="Escritor">Escritor</button>
-                    <button class="tag-btn" data-genre="Mangaka">Mangaka</button>
-                    <button class="tag-btn" data-genre="Programador">Programador</button>
-                    <button class="tag-btn" data-genre="Hacker">Hacker</button>
-                    <button class="tag-btn" data-genre="Detective">Detective</button>
-                    <button class="tag-btn" data-genre="Abogado">Abogado</button>
-                    <button class="tag-btn" data-genre="Profesor">Profesor</button>
-                    <button class="tag-btn" data-genre="Estudiante">Estudiante</button>
-                    <button class="tag-btn" data-genre="Familia">Familia</button>
-                    <button class="tag-btn" data-genre="Amistad">Amistad</button>
-                    <button class="tag-btn" data-genre="Triángulo Amoroso">Triángulo Amoroso</button>
+                    <button class="tag-btn" data-genre="Gladiadores">Gladiadores</button>
+                    <button class="tag-btn" data-genre="Caballeros">Caballeros</button>
+                    <button class="tag-btn" data-genre="Dragones">Dragones</button>
+                    <button class="tag-btn" data-genre="Mitología">Mitología</button>
+                    <button class="tag-btn" data-genre="Folclore">Folclore</button>
+                    <button class="tag-btn" data-genre="Leyendas">Leyendas</button>
+                    <button class="tag-btn" data-genre="Cuentos de Hadas">Cuentos de Hadas</button>
+                    <button class="tag-btn" data-genre="Oscuridad">Oscuridad</button>
+                    <button class="tag-btn" data-genre="Luz">Luz</button>
+                    <button class="tag-btn" data-genre="Bien vs Mal">Bien vs Mal</button>
+                    <button class="tag-btn" data-genre="Redención">Redención</button>
+                    <button class="tag-btn" data-genre="Venganza">Venganza</button>
+                    <button class="tag-btn" data-genre="Traición">Traición</button>
                     <button class="tag-btn" data-genre="Amor Prohibido">Amor Prohibido</button>
-                    <button class="tag-btn" data-genre="Segundo Amor">Segundo Amor</button>
-                    <button class="tag-btn" data-genre="Amor de Infancia">Amor de Infancia</button>
-                    <button class="tag-btn" data-genre="Enemigos a Amantes">Enemigos a Amantes</button>
-                    <button class="tag-btn" data-genre="Fake Dating">Fake Dating</button>
-                    <button class="tag-btn" data-genre="Contrato">Contrato</button>
-                    <button class="tag-btn" data-genre="Matrimonio Arreglado">Matrimonio Arreglado</button>
-                    <button class="tag-btn" data-genre="Edad Gap">Edad Gap</button>
-                    <button class="tag-btn" data-genre="Boss x Employee">Boss x Employee</button>
-                    <button class="tag-btn" data-genre="Omegaverse">Omegaverse</button>
-                    <button class="tag-btn" data-genre="Mpreg">Mpreg</button>
+                    <button class="tag-btn" data-genre="Triángulo Amoroso">Triángulo Amoroso</button>
+                    <button class="tag-btn" data-genre="Amistad">Amistad</button>
+                    <button class="tag-btn" data-genre="Familia">Familia</button>
+                    <button class="tag-btn" data-genre="Rivalidad">Rivalidad</button>
+                    <button class="tag-btn" data-genre="Competencia">Competencia</button>
+                    <button class="tag-btn" data-genre="Supervivencia">Supervivencia</button>
+                    <button class="tag-btn" data-genre="Exploración">Exploración</button>
+                    <button class="tag-btn" data-genre="Descubrimiento">Descubrimiento</button>
+                    <button class="tag-btn" data-genre="Innovación">Innovación</button>
+                    <button class="tag-btn" data-genre="Revolución">Revolución</button>
+                    <button class="tag-btn" data-genre="Rebelión">Rebelión</button>
+                    <button class="tag-btn" data-genre="Tiranía">Tiranía</button>
+                    <button class="tag-btn" data-genre="Libertad">Libertad</button>
+                    <button class="tag-btn" data-genre="Justicia">Justicia</button>
+                    <button class="tag-btn" data-genre="Corrupción">Corrupción</button>
+                    <button class="tag-btn" data-genre="Poder">Poder</button>
+                    <button class="tag-btn" data-genre="Ambición">Ambición</button>
+                    <button class="tag-btn" data-genre="Sacrificio">Sacrificio</button>
+                    <button class="tag-btn" data-genre="Destino">Destino</button>
+                    <button class="tag-btn" data-genre="Azar">Azar</button>
+                    <button class="tag-btn" data-genre="Suerte">Suerte</button>
+                    <button class="tag-btn" data-genre="Maldición">Maldición</button>
+                    <button class="tag-btn" data-genre="Bendición">Bendición</button>
+                    <button class="tag-btn" data-genre="Profecía">Profecía</button>
+                    <button class="tag-btn" data-genre="Oráculo">Oráculo</button>
+                    <button class="tag-btn" data-genre="Adivinación">Adivinación</button>
+                    <button class="tag-btn" data-genre="Alquimia">Alquimia</button>
+                    <button class="tag-btn" data-genre="Pociones">Pociones</button>
+                    <button class="tag-btn" data-genre="Artefactos">Artefactos</button>
+                    <button class="tag-btn" data-genre="Reliquias">Reliquias</button>
+                    <button class="tag-btn" data-genre="Tesoros">Tesoros</button>
+                    <button class="tag-btn" data-genre="Mazmorras">Mazmorras</button>
+                    <button class="tag-btn" data-genre="Misiones">Misiones</button>
+                    <button class="tag-btn" data-genre="Aventureros">Aventureros</button>
+                    <button class="tag-btn" data-genre="Gremios">Gremios</button>
+                    <button class="tag-btn" data-genre="Partidas">Partidas</button>
+                    <button class="tag-btn" data-genre="Niveles">Niveles</button>
+                    <button class="tag-btn" data-genre="Habilidades">Habilidades</button>
+                    <button class="tag-btn" data-genre="Evolución">Evolución</button>
                 </div>
             </section>
 
             <section class="panel">
                 <h3>#️⃣ Hashtags</h3>
-                <input type="text" id="in-hashtags" placeholder="#manhwa #webtoon #romance (separados por espacio)">
-                <label>Los hashtags se mostrarán debajo de la sinopsis</label>
+                <input type="text" id="in-hashtags" placeholder="#manhwa #webtoon #romance">
+                <label>Separados por espacio</label>
             </section>
 
             <section class="panel">
@@ -203,19 +231,18 @@
             </section>
 
             <section class="panel">
-                <h3>🖼️ Resolución de Exportación</h3>
+                <h3>🖼️ Resolución</h3>
                 <select id="in-resolution">
-                    <option value="2">2K (Óptimo)</option>
-                    <option value="4" selected>4K (Alta Calidad)</option>
-                    <option value="6">6K (Muy Alta)</option>
-                    <option value="8">8K (Máxima)</option>
+                    <option value="2">2K</option>
+                    <option value="4" selected>4K</option>
+                    <option value="6">6K</option>
+                    <option value="8">8K</option>
                 </select>
-                <label>Mayor resolución = archivo más pesado</label>
             </section>
 
             <section class="panel">
                 <h3>🔗 Enlaces & Estado</h3>
-                <input type="text" id="in-url" placeholder="URL para QR (Arriba)">
+                <input type="text" id="in-url" placeholder="URL para QR">
                 <select id="in-status">
                     <option value="EN EMISIÓN" data-color="#00f2ff">Emisión</option>
                     <option value="COMPLETADO" data-color="#2ed573">Completado</option>
@@ -245,11 +272,11 @@
                 <div class="coord" style="top:10px; left:10px;">AX-440</div>
                 <div class="coord" style="bottom:10px; right:10px;">REF: STUDIO</div>
 
-                <div class="card-content-wrapper" id="align-target">
+                <div class="card-content-wrapper align-left" id="align-target">
                     <div id="fit-container">
                         <div id="genres-row" class="genres-row"></div>
                         <h2 id="display-title">SCRIPTIUM</h2>
-                        <div id="display-synop">Personaliza bordes, fuentes, calificación, géneros y hashtags. El texto siempre se ajustará automáticamente.</div>
+                        <div id="display-synop">Personaliza bordes, fuentes, calificación, géneros y hashtags. El texto se ajustará automáticamente.</div>
                         <div id="hashtags-row" class="hashtags-row"></div>
                     </div>
                 </div>
@@ -258,6 +285,6 @@
     </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-    <script src="script.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
