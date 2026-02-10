@@ -39,6 +39,56 @@ body {
     } 
 }
 
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #1f1f27;
+        max-height: 50vh;
+    }
+
+    .preview-zone {
+        padding: 20px;
+        min-height: 50vh;
+    }
+
+    .manhwa-card {
+        transform: scale(0.85);
+    }
+
+    .grid-3 {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .manhwa-card {
+        transform: scale(0.65);
+    }
+
+    .sidebar {
+        padding: 15px;
+    }
+
+    .panel {
+        padding: 12px;
+    }
+
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-3 {
+        grid-template-columns: 1fr;
+    }
+}
+
 .panel { 
     background: var(--panel-bg); 
     padding: 15px; 
